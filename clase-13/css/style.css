@@ -1,0 +1,29 @@
+/* normalizar: llamar al selector universal que afecta a todos los elementos */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0; /* el espacio del borde hacia afuera */
+    padding: 0; /* borde interno entre el contenido y el borde, osea del borde hacia adentro */
+    box-sizing: border-box; /* que los bordes no se sumen para afuera */
+    font-family: 'Poppins', sans-serif; /* para que todos los elementos por defecto tengan esta fuente */
+}
+
+button{
+    width: 50px;
+    border: solid 2px black;
+}
+
+header{
+    display: flex; /* porque flexbox se aplica al padre */
+    flex-direction: row; /* no es necesario pq ya viene por defecto, dice que los elementos hijos se acomoden uno al lado del otro de manera horizontal */
+    justify-content: space-between; /* manda a los hijos a cada punta */
+    padding: 2vh 5vw; /* primero eje vertical, luego eje horizontal, 2vh equivale al 2% del alto de mi pantalla de viewport, y 5vw al 5%, padding es del borde hacia adentro */
+
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+}
