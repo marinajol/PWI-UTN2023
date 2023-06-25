@@ -10,10 +10,8 @@
 
 :root{
     --color-principal: #FFC727;
-    --color-secundario: #FFB412;
-
-
-
+    --color-complementario: #FFB412;
+    --color-secundario: #DFEAFF;
 }
 
 header{
@@ -21,7 +19,6 @@ header{
     flex-direction: row;    /* no es necesario pq ya viene por defecto, hace que los elementos hijos se acomoden uno al lado del otro de manera horizontal */
     justify-content: space-between;     /* manda a los hijos a cada punta */
     padding: 4vh 5vw;   /*  primero eje vertical, luego eje horizontal, 2vh equivale al 2% del alto de mi pantalla de viewport, y 5vw al 5%, padding es del borde hacia adentro */
-
 }
 
 header button {
@@ -43,12 +40,11 @@ header button {
     position: absolute;
     top: -28px;
     color: var(--color-principal);
-
 }
 
 .bi-bookmark-fill{
     padding-top: 5px;
-    color: var(--color-secundario);
+    color: var(--color-complementario);
 }
 
 .logo div h2{
@@ -76,4 +72,55 @@ main{
 
 h1{
     font-size: 2.2rem;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background-color: var(--color-secundario);
+    padding: 5vh 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 5vh;
+}
+
+.serviceCard{
+    width: 70%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.serviceCard img{
+    width: 100%;
+}
+
+footer{
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+
+}
+
+footer .follow{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+}
+
+.redes{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.7rem;
+}
+
+.copyright{
+    font-size: 0.8rem;
 }
