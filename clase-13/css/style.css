@@ -8,16 +8,19 @@
     font-family: 'Poppins', sans-serif; /* para que todos los elementos por defecto tengan esta fuente */
 }
 
-button{
-    width: 50px;
-    border: solid 2px black;
+:root{
+    --color-principal: #FFC727;
+    --color-secundario: #FFB412;
+
+
+
 }
 
 header{
     display: flex;      /* porque flexbox se aplica al padre */
     flex-direction: row;    /* no es necesario pq ya viene por defecto, hace que los elementos hijos se acomoden uno al lado del otro de manera horizontal */
     justify-content: space-between;     /* manda a los hijos a cada punta */
-    padding: 2vh 5vw;   /* primero eje vertical, luego eje horizontal, 2vh equivale al 2% del alto de mi pantalla de viewport, y 5vw al 5%, padding es del borde hacia adentro */
+    padding: 4vh 5vw;   /*  primero eje vertical, luego eje horizontal, 2vh equivale al 2% del alto de mi pantalla de viewport, y 5vw al 5%, padding es del borde hacia adentro */
 
 }
 
@@ -27,6 +30,50 @@ header button {
     font-size: 1.4rem;
 }
 
+.logo{
+    position: relative;
+}
+
 .logo div{
     display: flex;
+}
+
+.bi-people-fill{
+    font-size: 1.7rem;
+    position: absolute;
+    top: -28px;
+    color: var(--color-principal);
+
+}
+
+.bi-bookmark-fill{
+    padding-top: 5px;
+    color: var(--color-secundario);
+}
+
+.logo div h2{
+    line-height: 28px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.colorPrincipal{
+    color: var(--color-principal)
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;    /* tengo un flexbox, quiero definir el espacio entre cada hijo, lo hago con gap */
+}
+
+h1{
+    font-size: 2.2rem;
 }
